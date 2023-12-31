@@ -1,0 +1,76 @@
+@use './partials/global' as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $navbar-background-color;
+    margin: 1rem;
+
+    &__title {
+        color: $site-logo-color;
+    }
+
+    &__menu-items {
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: black
+        }
+    }
+}
+
+.hero {
+    background-color: $hero-background-color;
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+    align-items: center;
+
+    &__article {
+        margin: auto 0;
+        width: 450px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__slogan {
+        color: $site-logo-color;
+    }
+
+    &__text {
+        color: $site-logo-color;
+        text-align: left;
+    }
+
+    &__button {
+        background-color: $button-background-color;
+        border: none;
+        border-radius: 20px;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: #FFFF;
+            padding: 0rem 1.5rem;
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        img {
+        width: 300px;      
+        }
+    }
+}
