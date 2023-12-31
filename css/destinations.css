@@ -12,6 +12,7 @@ h1 {
 
 h2 {
   font-size: 1rem;
+  color: #335576;
 }
 
 h6 {
@@ -20,4 +21,5 @@ h6 {
 
 p, a {
   font-size: 0.75rem;
+  text-decoration: none;
 }/*# sourceMappingURL=destinations.css.map */
