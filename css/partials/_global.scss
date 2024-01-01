@@ -18,11 +18,11 @@ $button-background-color: #DB7A4E;
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: $footer-titles-text-color;
 }
 
@@ -50,5 +50,112 @@ p, a {
     h2 {
         color: white;
         padding: 0.75rem;
+    }
+}
+
+// nav+footer
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: $navbar-background-color;
+    position: fixed;
+    width: 100vw;
+    padding: 1rem 4rem;
+
+    &__title {
+        color: $site-logo-color;
+    }
+
+    &__menu-items {
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: black
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    background-color: $hero-background-color;
+    padding: 0 2rem;
+}
+
+.footer {
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 80px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 40px;
+            
+            h6 {
+                color: $footer-subtitles;
+            }
+
+            p {
+                color: $footer-titles-text-color;
+            }
+        }
+    }
+
+    &__hours {
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        justify-content: space-between;
+
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 40px;
+
+                p {
+                    color: $footer-titles-text-color;
+                }
+
+                h6 {
+                    color: $footer-subtitles;
+                }
+                
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        justify-content: space-between;
+        width: 100px;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            
+            img {
+                width: 25x;
+                height: 25px;
+            }
+        }
     }
 }
