@@ -5,11 +5,11 @@ h1 {
 }
 
 .itinerary {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-size: cover;
     background-position:center;
@@ -19,16 +19,17 @@ h1 {
     }
 
     &__title {
-        padding-left: 5vw;
+        padding-left: 5rem;
         align-self: flex-start;
         color: white;
-        padding-bottom: 5rem;
+        padding-bottom: 4rem;
+        margin-top: 5rem;
     }
 
     &__card {
         display: flex;
         justify-content: space-evenly;
-        width: 85vw;
+        width: 75vw;
 
 
         &--standard {
@@ -47,13 +48,24 @@ h1 {
                 height: 400px;
                 margin-top: -1.25rem;
 
+                li {
+                    height: 50px;
+                    background-color: $hero-background-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
                 h3 {
                     border-bottom: 5px solid black;
                     width: 250px;
-                    margin: auto;
                     font-size: 1.25rem;
                 }
             }
         }
     }
+}
+
+#no-background {
+    background-color: white;
 }

@@ -24,11 +24,76 @@ p, a {
   text-decoration: none;
 }
 
+.itinerary {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.itinerary--hawaii {
+  background-image: url(../../assets/images/hawaii.jpg);
+}
+.itinerary--greece {
+  background-image: url(../../assets/images/greece.jpg);
+}
+.itinerary--iceland {
+  background-image: url(../../assets/images/iceland.jpg);
+}
+.itinerary__title {
+  padding-left: 5rem;
+  align-self: flex-start;
+  color: white;
+  padding-bottom: 4rem;
+  margin-top: 5rem;
+}
+.itinerary__card {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75vw;
+}
+.itinerary__card--standard {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.itinerary__card--standard ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 400px;
+  margin-top: -1.25rem;
+}
+.itinerary__card--standard ul li {
+  height: 50px;
+  background-color: #FEFAF5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itinerary__card--standard ul h3 {
+  border-bottom: 5px solid black;
+  width: 250px;
+  font-size: 1.25rem;
+}
+
+#no-background {
+  background-color: white;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   background-color: #FFFFFF;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100vw;
   padding: 1rem 4rem;
 }
@@ -38,12 +103,17 @@ p, a {
 .navbar__menu-items {
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 500px;
   list-style: none;
 }
 .navbar__menu-items a {
   text-decoration: none;
   color: black;
+}
+
+#active {
+  -webkit-text-decoration: solid underline #DB7A4E 4px;
+          text-decoration: solid underline #DB7A4E 4px;
 }
 
 footer {
@@ -116,9 +186,8 @@ footer {
   background-color: #FEFAF5;
   display: flex;
   justify-content: space-around;
-  height: 60vh;
+  height: 500px;
   align-items: center;
-  padding-top: 60px;
 }
 .hero__article {
   width: 500px;

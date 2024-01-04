@@ -35,6 +35,80 @@ p, a {
     text-decoration: none;
 }
 
+.itinerary {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-size: cover;
+    background-position:center;
+
+    &--hawaii {
+        background-image: url(../../assets/images/hawaii.jpg);
+    }
+
+    &--greece {
+        background-image: url(../../assets/images/greece.jpg);
+    }
+
+    &--iceland {
+        background-image: url(../../assets/images/iceland.jpg);
+    }
+
+    &__title {
+        padding-left: 5rem;
+        align-self: flex-start;
+        color: white;
+        padding-bottom: 4rem;
+        margin-top: 5rem;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-evenly;
+        width: 75vw;
+
+
+        &--standard {
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.200);
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 400px;
+                margin-top: -1.25rem;
+
+                li {
+                    height: 50px;
+                    background-color: $hero-background-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                h3 {
+                    border-bottom: 5px solid black;
+                    width: 250px;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+#no-background {
+    background-color: white;
+}
+
 // mixins 
 @mixin recommendations-card {
     display: flex;
@@ -58,7 +132,8 @@ p, a {
     display: flex;
     justify-content: space-between;
     background-color: $navbar-background-color;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100vw;
     padding: 1rem 4rem;
 
@@ -69,7 +144,7 @@ p, a {
     &__menu-items {
         display: flex;
         justify-content: space-around;
-        width: 300px;
+        width: 500px;
         list-style: none;
 
         a {
@@ -77,6 +152,10 @@ p, a {
             color: black
         }
     }
+}
+
+#active {
+    text-decoration: solid underline #DB7A4E 4px;
 }
 
 footer {
