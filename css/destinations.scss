@@ -15,7 +15,15 @@ h1 {
     background-position:center;
 
     &--hawaii {
-        background-image: url(../assets/images/hawaii.jpg);
+        background-image: url(../../assets/images/hawaii.jpg);
+    }
+
+    &--greece {
+        background-image: url(../../assets/images/greece.jpg);
+    }
+
+    &--iceland {
+        background-image: url(../../assets/images/iceland.jpg);
     }
 
     &__title {
@@ -28,8 +36,8 @@ h1 {
 
     &__card {
         display: flex;
-        justify-content: space-evenly;
-        width: 75vw;
+        justify-content: space-between;
+        width: 80vw;
 
 
         &--standard {
@@ -47,6 +55,7 @@ h1 {
                 justify-content: space-evenly;
                 height: 400px;
                 margin-top: -1.25rem;
+                padding: 0;
 
                 li {
                     height: 50px;

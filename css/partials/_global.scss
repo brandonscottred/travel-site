@@ -9,11 +9,11 @@ $footer-subtitles: #DB7A4E;
 $button-background-color: #DB7A4E;
 
 // resets
-* {
+body {
     font-family: $base-font;
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
@@ -22,87 +22,22 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: $footer-titles-text-color;
 }
 
 h6 {
-    font-size: 0.5rem;
-}
-
-p, a {
     font-size: 0.75rem;
-    text-decoration: none;
 }
 
-.itinerary {
-    height: 90vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-size: cover;
-    background-position:center;
+p {
+    font-size: 1rem;
+    font-weight: 500;
+}
 
-    &--hawaii {
-        background-image: url(../../assets/images/hawaii.jpg);
-    }
-
-    &--greece {
-        background-image: url(../../assets/images/greece.jpg);
-    }
-
-    &--iceland {
-        background-image: url(../../assets/images/iceland.jpg);
-    }
-
-    &__title {
-        padding-left: 5rem;
-        align-self: flex-start;
-        color: white;
-        padding-bottom: 4rem;
-        margin-top: 5rem;
-    }
-
-    &__card {
-        display: flex;
-        justify-content: space-evenly;
-        width: 75vw;
-
-
-        &--standard {
-            width: 300px;
-            height: 400px;
-            text-align: center;
-            background-color: white;
-            border-radius: 5px;
-            border: 1px solid rgba(0, 0, 0, 0.200);
-
-            ul {
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                height: 400px;
-                margin-top: -1.25rem;
-
-                li {
-                    height: 50px;
-                    background-color: $hero-background-color;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                h3 {
-                    border-bottom: 5px solid black;
-                    width: 250px;
-                    font-size: 1.25rem;
-                }
-            }
-        }
-    }
+a {
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 #no-background {
@@ -127,7 +62,12 @@ p, a {
     }
 }
 
-// nav+footer
+#active-page {
+    text-decoration: underline #DB7A4E 4px;
+    text-underline-offset: 0.75rem;
+}
+
+// nav
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -135,10 +75,11 @@ p, a {
     position: sticky;
     top: 0;
     width: 100vw;
-    padding: 1rem 4rem;
+    align-items: center;
 
     &__title {
         color: $site-logo-color;
+        padding-left: 2rem;
     }
 
     &__menu-items {
@@ -146,6 +87,7 @@ p, a {
         justify-content: space-around;
         width: 500px;
         list-style: none;
+        padding-right: 2rem;
 
         a {
             text-decoration: none;
@@ -154,32 +96,22 @@ p, a {
     }
 }
 
-#active {
-    text-decoration: solid underline #DB7A4E 4px;
-}
-
-footer {
+// footer
+.footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 150px;
     background-color: $hero-background-color;
-    padding: 0 2rem;
-}
-
-.footer {
 
     &__contact {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 80px;
 
         div {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 40px;
             
             h6 {
                 color: $footer-subtitles;
@@ -194,19 +126,17 @@ footer {
     &__hours {
         display: flex;
         flex-direction: column;
-        height: 80px;
         justify-content: space-between;
 
         &-block {
             display: flex;
             justify-content: space-between;
-            width: 400px;
+            width: 450px;
 
             div {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                height: 40px;
 
                 p {
                     color: $footer-titles-text-color;
@@ -223,17 +153,35 @@ footer {
     &__social {
         display: flex;
         flex-direction: column;
-        height: 80px;
         justify-content: space-between;
-        width: 100px;
+        width: 150px;
+
+        h2 {
+            margin-top: 0;
+        }
 
         div {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             
-            img {
-                width: 25x;
-                height: 25px;
+            h6 {
+                color: $navbar-background-color;
+            }
+
+            .footer__icons {
+                display: flex;
+                flex-direction: row;
+
+                a {
+                    width: 30px;
+                    height: 50px;
+
+                    img {
+                        height: 25px;
+                        margin-top: 1rem;
+                    }
+                }
             }
         }
     }

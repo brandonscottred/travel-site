@@ -10,10 +10,10 @@
 
     &__article {
         width: 500px;
-        height: 250px;
+        height: 300px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
     }
 
     &__slogan {
@@ -23,23 +23,16 @@
     &__text {
         color: $site-logo-color;
         text-align: left;
-        width: 500px;
+        width: 550px;
+        height: 75px;
     }
 
     &__button {
         background-color: $button-background-color;
-        border: none;
         border-radius: 20px;
-        height: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        a {
-            text-decoration: none;
-            color: #FFFF;
-            padding: 0rem 1.5rem;
-        }
+        text-decoration: none;
+        color: #FFFF;
+        padding: 0.5rem 2rem;
     }
 
     &__image {
@@ -57,7 +50,7 @@
     
     &__title {
         color: $footer-titles-text-color;
-        padding: 2rem 0 0 125px;
+        padding: 2rem 0 0 4rem;
     }
 
     &__card {

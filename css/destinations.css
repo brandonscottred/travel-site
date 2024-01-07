@@ -1,8 +1,8 @@
-* {
+body {
   font-family: Verdana;
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -11,17 +11,134 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #335576;
 }
 
 h6 {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
-p, a {
-  font-size: 0.75rem;
+p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+a {
+  font-size: 1rem;
   text-decoration: none;
+}
+
+#no-background {
+  background-color: white;
+}
+
+#active-page {
+  -webkit-text-decoration: underline #DB7A4E 4px;
+          text-decoration: underline #DB7A4E 4px;
+  text-underline-offset: 0.75rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  align-items: center;
+}
+.navbar__title {
+  color: #335576;
+  padding-left: 2rem;
+}
+.navbar__menu-items {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  list-style: none;
+  padding-right: 2rem;
+}
+.navbar__menu-items a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #FEFAF5;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__contact div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__contact div h6 {
+  color: #DB7A4E;
+}
+.footer__contact div p {
+  color: #335576;
+}
+.footer__hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__hours-block {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+}
+.footer__hours-block div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__hours-block div p {
+  color: #335576;
+}
+.footer__hours-block div h6 {
+  color: #DB7A4E;
+}
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+}
+.footer__social h2 {
+  margin-top: 0;
+}
+.footer__social div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__social div h6 {
+  color: #FFFFFF;
+}
+.footer__social div .footer__icons {
+  display: flex;
+  flex-direction: row;
+}
+.footer__social div .footer__icons a {
+  width: 30px;
+  height: 50px;
+}
+.footer__social div .footer__icons a img {
+  height: 25px;
+  margin-top: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 .itinerary {
@@ -52,8 +169,8 @@ p, a {
 }
 .itinerary__card {
   display: flex;
-  justify-content: space-evenly;
-  width: 75vw;
+  justify-content: space-between;
+  width: 80vw;
 }
 .itinerary__card--standard {
   width: 300px;
@@ -70,162 +187,7 @@ p, a {
   justify-content: space-evenly;
   height: 400px;
   margin-top: -1.25rem;
-}
-.itinerary__card--standard ul li {
-  height: 50px;
-  background-color: #FEFAF5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.itinerary__card--standard ul h3 {
-  border-bottom: 5px solid black;
-  width: 250px;
-  font-size: 1.25rem;
-}
-
-#no-background {
-  background-color: white;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #FFFFFF;
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  padding: 1rem 4rem;
-}
-.navbar__title {
-  color: #335576;
-}
-.navbar__menu-items {
-  display: flex;
-  justify-content: space-around;
-  width: 500px;
-  list-style: none;
-}
-.navbar__menu-items a {
-  text-decoration: none;
-  color: black;
-}
-
-#active {
-  -webkit-text-decoration: solid underline #DB7A4E 4px;
-          text-decoration: solid underline #DB7A4E 4px;
-}
-
-footer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 150px;
-  background-color: #FEFAF5;
-  padding: 0 2rem;
-}
-
-.footer__contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 80px;
-}
-.footer__contact div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 40px;
-}
-.footer__contact div h6 {
-  color: #DB7A4E;
-}
-.footer__contact div p {
-  color: #335576;
-}
-.footer__hours {
-  display: flex;
-  flex-direction: column;
-  height: 80px;
-  justify-content: space-between;
-}
-.footer__hours-block {
-  display: flex;
-  justify-content: space-between;
-  width: 400px;
-}
-.footer__hours-block div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 40px;
-}
-.footer__hours-block div p {
-  color: #335576;
-}
-.footer__hours-block div h6 {
-  color: #DB7A4E;
-}
-.footer__social {
-  display: flex;
-  flex-direction: column;
-  height: 80px;
-  justify-content: space-between;
-  width: 100px;
-}
-.footer__social div {
-  display: flex;
-  justify-content: space-between;
-}
-.footer__social div img {
-  width: 25x;
-  height: 25px;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-.itinerary {
-  height: 90vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-}
-.itinerary--hawaii {
-  background-image: url(../assets/images/hawaii.jpg);
-}
-.itinerary__title {
-  padding-left: 5rem;
-  align-self: flex-start;
-  color: white;
-  padding-bottom: 4rem;
-  margin-top: 5rem;
-}
-.itinerary__card {
-  display: flex;
-  justify-content: space-evenly;
-  width: 75vw;
-}
-.itinerary__card--standard {
-  width: 300px;
-  height: 400px;
-  text-align: center;
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.itinerary__card--standard ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 400px;
-  margin-top: -1.25rem;
+  padding: 0;
 }
 .itinerary__card--standard ul li {
   height: 50px;
